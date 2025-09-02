@@ -47,22 +47,20 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 
 1. **Clona el repositorio**
 ```bash
-git clone https://github.com/fvilpaz/N_Finances
+git clone https://github.com/fvilpaz/N_Finanzas
 ```
 
 2. Navega a la carpeta
 
 ```bash
-cd N_Finances
+cd N_Finanzas
 ```
 
 3. Abre el archivo principal
 
 ```
-# Opción 1: Navegador por defecto
-open index.html
-
-# Opción 2: Arrastra el archivo a tu navegador
+# Opción 1: Desde la terminal escribe open index.html
+# Opción 2: Doble click o arrastra el archivo a tu navegador
 # Opción 3: Click derecho → "Abrir con" → Tu navegador
 ```
 
