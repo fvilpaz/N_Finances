@@ -1,4 +1,4 @@
-lo# 💶 N_Finanzas
+# 💶 N_Finanzas
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)
 ![HTML5](https://img.shields.io/badge/HTML5-Semantic-orange.svg)
