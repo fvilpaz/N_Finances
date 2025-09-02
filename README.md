@@ -65,5 +65,3 @@ cd N_Finanzas
 ```
 
 ¡Listo! Ya puedes empezar a usar N_Finanzas 🎉
-
-```
