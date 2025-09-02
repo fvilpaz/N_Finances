@@ -1,54 +1,54 @@
+# 💶 N_Finanzas
 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)
+![HTML5](https://img.shields.io/badge/HTML5-Semantic-orange.svg)
+![CSS3](https://img.shields.io/badge/CSS3-Responsive-blue.svg)
+![Chart.js](https://img.shields.io/badge/Chart.js-Visualization-green.svg)
 
-💶 N_Finanzas
+**Herramienta de control financiero personal** desarrollada como proyecto de aprendizaje de JavaScript.
 
-Herramienta de control financiero personal desarrollada como proyecto de aprendizaje.
-
-🚀 Origen del proyecto
+## 🚀 Origen del proyecto
 
 Este proyecto nació como un ejercicio práctico para:
+- 🎯 **Aprender JavaScript** desde cero
+- 📊 **Experimentar con Chart.js** para visualización de datos
+- 🛠️ **Crear una herramienta útil** para el control de gastos personales
+- 💻 **Explorar el desarrollo frontend** con HTML5 y CSS3
 
-· Aprender JavaScript desde cero
-· Experimentar con Chart.js para visualización de datos
-· Crear una herramienta útil y funcional para el control de gastos personales
-· Explorar el desarrollo frontend con HTML5 y CSS3
+## 🤖 Colaboración con IA
 
-🤖 Colaboración con IA
+El desarrollo contó con la **asistencia de IA colaborativa** para:
+- 🏗️ Arquitectura del código y mejores prácticas
+- 🔧 Resolución de problemas técnicos específicos
+- ⚡ Optimización de funciones y algoritmos
+- 🎨 Diseño de interfaz de usuario
 
-El desarrollo contó con la asistencia de IA colaborativa para:
+> **Nota importante:** Si bien la IA proporcionó guía y soluciones técnicas, las decisiones finales de diseño, funcionalidad e implementación fueron humanas.
 
-· Arquitectura del código y mejores prácticas
-· Resolución de problemas técnicos específicos
-· Optimización de funciones y algoritmos
-· Diseño de interfaz de usuario
+## 🛠️ Tecnologías utilizadas
 
-Nota importante: Si bien la IA proporcionó guía y soluciones técnicas, las decisiones finales de diseño, funcionalidad y implementación fueron humanas.
+| Tecnología | Propósito |
+|------------|-----------|
+| **HTML5** | Estructura semántica |
+| **CSS3** | Estilos y diseño responsive |
+| **JavaScript ES6+** | Lógica de aplicación |
+| **Chart.js** | Visualización de datos |
+| **Git** | Control de versiones |
 
-🛠️ Tecnologías utilizadas
+## 📋 Funcionalidades
 
-· HTML5 - Estructura semántica
-· CSS3 - Estilos y diseño responsive
-· JavaScript ES6+ - Lógica de aplicación
-· Chart.js - Visualización de datos
-· Git - Control de versiones
+- ✅ **Cálculo automático** de ingresos y gastos
+- ✅ **Edición en tiempo real** de todos los conceptos
+- ✅ **Gráficos interactivos** de distribución de gastos
+- ✅ **Diseño responsive** para móvil y desktop
+- ✅ **Resultados con división equitativa** automática
 
-📋 Funcionalidades
+## 📸 Preview
 
-· ✅ Cálculo automático de ingresos y gastos
-· ✅ Edición en tiempo real de todos los conceptos
-· ✅ Gráficos interactivos de distribución de gastos
-· ✅ Diseño responsive para móvil y desktop
-· ✅ Resultados con división equitativa automática
+![N_Finanzas Preview](https://via.placeholder.com/800x400?text=N_Finanzas+Screenshot)
 
----
+## 🚀 Cómo usar
 
-¿Por qué esta honestidad es GOOD PRACTICE?
-
-1. Transparencia total ← La comunidad tech lo valora MUCHO
-2. Documenta tu proceso de aprendizaje
-3. Muestra cómo usas herramientas modernas (IA es una herramienta más)
-4. Inspira a otros a aprender de forma similar
-
-¡Quedaría perfecto! Y demuestras madurez como developer. 😊
-
-¿Quieres que te ayude a formatear el README.md bonito para GitHub?
+1. **Clona el repositorio**
+```bash
+git clone https://github.com/tuusuario/n_finanzas.git
