@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N_Finanzas - Control Mensual</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c5282;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #4a5568;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4299e1;
+        }
+        .resultados {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #4299e1;
+        }
+        .resultado-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .resultado-item strong {
+            color: #2d3748;
+        }
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c5282;
+            background: #ebf8ff !important;
+        }
+        .division {
+            background: #f0fff4 !important;
+            border-left: 3px solid #48bb78;
+        }
+        .negativo {
+            color: #e53e3e;
+        }
+        .positivo {
+            color: #38a169;
+        }
+        .chart-container {
+            height: 400px;
+            margin-top: 30px;
+        }
+        .ingresos-section, .gastos-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .ingresos-section, .gastos-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>💶 N_Finanzas - Control Mensual</h1>
+
+    <div class="card">
+        <h2>Ingresos del Mes</h2>
+        <div class="ingresos-section">
+            <div class="form-group">
+                <label for="sueldo-aury">Sueldo de AURY (€):</label>
+                <input type="number" id="sueldo-aury" value="1900" step="1" oninput="calcularTodo()">
+            </div>
+            
+            <div class="form-group">
+                <label for="sueldo-nando">Sueldo de NANDO (€):</label>
+                <input type="number" id="sueldo-nando" value="1580" step="1" oninput="calcularTodo()">
+            </div>
+        </div>
+
+        <h2 style="margin-top: 30px;">Gastos Fijos Mensuales</h2>
+        <div class="gastos-section">
+            <div class="form-group">
+                <label for="gasto-agua">Agua (€):</label>
+                <input type="number" id="gasto-agua" value="30.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-alquiler">Alquiler (€):</label>
+                <input type="number" id="gasto-alquiler" value="650.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-comida">Comida (€):</label>
+                <input type="number" id="gasto-comida" value="600.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-juridica">Cualidad Jurídica (€):</label>
+                <input type="number" id="gasto-juridica" value="316.82" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-medac">Medac (€):</label>
+                <input type="number" id="gasto-medac" value="398.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-gas">Gas (€):</label>
+                <input type="number" id="gasto-gas" value="50.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-luz">Luz (€):</label>
+                <input type="number" id="gasto-luz" value="162.50" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-orange">Orange (€):</label>
+                <input type="number" id="gasto-orange" value="215.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-seguro-coche">Seguro Coche (€):</label>
+                <input type="number" id="gasto-seguro-coche" value="40.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-decesos">Seguro Decesos (€):</label>
+                <input type="number" id="gasto-decesos" value="10.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-carburante">Carburante (€):</label>
+                <input type="number" id="gasto-carburante" value="120.00" step="0.01" oninput="calcularTodo()">
+            </div>
+            <div class="form-group">
+                <label for="gasto-aquaservice">Aquaservice (€):</label>
+                <input type="number" id="gasto-aquaservice" value="50.00" step="0.01" oninput="calcularTodo()">
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Resultados</h2>
+        <div class="resultados">
+            <div class="resultado-item">
+                <span>Total Ingresos:</span>
+                <strong id="total-ingresos">€0.00</strong>
+            </div>
+            
+            <div class="resultado-item">
+                <span>Total Gastos Fijos:</span>
+                <strong id="total-gastos">€0.00</strong>
+            </div>
+            
+            <div class="resultado-item total">
+                <span>Dinero Libre:</span>
+                <strong id="dinero-libre">€0.00</strong>
+            </div>
+            
+            <div class="resultado-item division">
+                <span>Para AURY:</span>
+                <strong id="para-aury">€0.00</strong>
+            </div>
+            
+            <div class="resultado-item division">
+                <span>Para NANDO:</span>
+                <strong id="para-nando">€0.00</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Gráfico de Gastos Fijos</h2>
+        <div class="chart-container">
+            <canvas id="grafico-gastos"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let graficoGastos = null;
+
+        function calcularTodo() {
+            // Cogemos los valores de los inputs de ingresos
+            const sueldoAury = parseFloat(document.getElementById('sueldo-aury').value) || 0;
+            const sueldoNando = parseFloat(document.getElementById('sueldo-nando').value) || 0;
+
+            // Cogemos los valores de los inputs de gastos
+            const gastos = {
+                "Agua": parseFloat(document.getElementById('gasto-agua').value) || 0,
+                "Alquiler": parseFloat(document.getElementById('gasto-alquiler').value) || 0,
+                "Comida": parseFloat(document.getElementById('gasto-comida').value) || 0,
+                "Cualidad Jurídica": parseFloat(document.getElementById('gasto-juridica').value) || 0,
+                "Medac": parseFloat(document.getElementById('gasto-medac').value) || 0,
+                "Gas": parseFloat(document.getElementById('gasto-gas').value) || 0,
+                "Luz": parseFloat(document.getElementById('gasto-luz').value) || 0,
+                "Orange": parseFloat(document.getElementById('gasto-orange').value) || 0,
+                "Seguro coche": parseFloat(document.getElementById('gasto-seguro-coche').value) || 0,
+                "Seguro decesos": parseFloat(document.getElementById('gasto-decesos').value) || 0,
+                "Carburante": parseFloat(document.getElementById('gasto-carburante').value) || 0,
+                "Aquaservice": parseFloat(document.getElementById('gasto-aquaservice').value) || 0
+            };
+
+            // Calculamos TODO
+            const totalIngresos = sueldoAury + sueldoNando;
+            const totalGastos = Object.values(gastos).reduce((sum, value) => sum + value, 0);
+            const dineroLibre = totalIngresos - totalGastos;
+            const paraCadaUno = dineroLibre / 2;
+
+            // Mostramos los resultados
+            document.getElementById('total-ingresos').textContent = '€' + totalIngresos.toFixed(2);
+            document.getElementById('total-gastos').textContent = '€' + totalGastos.toFixed(2);
+            
+            const libreElem = document.getElementById('dinero-libre');
+            libreElem.textContent = '€' + dineroLibre.toFixed(2);
+            libreElem.className = dineroLibre >= 0 ? 'total positivo' : 'total negativo';
+            
+            document.getElementById('para-aury').textContent = '€' + paraCadaUno.toFixed(2);
+            document.getElementById('para-nando').textContent = '€' + paraCadaUno.toFixed(2);
+
+            // Actualizar gráfico
+            actualizarGrafico(gastos);
+        }
+
+        function actualizarGrafico(gastos) {
+            const ctx = document.getElementById('grafico-gastos').getContext('2d');
+            
+            // Destruir gráfico anterior si existe
+            if (graficoGastos) {
+                graficoGastos.destroy();
+            }
+
+            // Crear nuevo gráfico
+            graficoGastos = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(gastos),
+                    datasets: [{
+                        data: Object.values(gastos),
+                        backgroundColor: [
+                            '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                            '#FF9F40', '#FF6384', '#C9CBCF', '#4BC0C0', '#36A2EB',
+                            '#FFCE56', '#9966FF'
+                        ],
+                        borderWidth: 2,
+                        hoverOffset: 15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Distribución de Gastos Fijos',
+                            font: { size: 16, weight: 'bold' }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': €' + context.raw.toFixed(2);
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Calculamos automáticamente al cargar la página
+        window.onload = function() {
+            calcularTodo();
+        };
+    </script>
+</body>
+</html>
