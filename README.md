@@ -43,20 +43,30 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 - ✅ **Diseño responsive** para móvil y desktop
 - ✅ **Resultados con división equitativa** automática
 
+```markdown
 ## 🚀 Cómo usar
 
 1. **Clona el repositorio**
 ```bash
-git clone https://github.com/fvilpaz/N_Finances
+git clone https://github.com/fvilpaz/N_Finanzas
+```
 
-2.  **Navega a la carpeta**
+1. Navega a la carpeta
+
 ```bash
 cd N_Finanzas
+```
 
-3. **Abre el archivo principal**
+1. Abre el archivo principal
+
 ```bash
 # Opción 1: Navegador por defecto
 open index.html
 
 # Opción 2: Arrastra el archivo a tu navegador
 # Opción 3: Click derecho → "Abrir con" → Tu navegador
+```
+
+¡Listo! Ya puedes empezar a usar N_Finanzas 🎉
+
+```
