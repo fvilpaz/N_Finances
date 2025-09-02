@@ -1,4 +1,4 @@
-# 💶 N_Finanzas
+lo# 💶 N_Finanzas
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)
 ![HTML5](https://img.shields.io/badge/HTML5-Semantic-orange.svg)
@@ -47,4 +47,4 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 
 1. **Clona el repositorio**
 ```bash
-git clone https://github.com/tuusuario/n_finanzas.git
+git clone https://github.com/fvilpaz/N_Finances
