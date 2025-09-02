@@ -50,9 +50,11 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 git clone https://github.com/fvilpaz/N_Finances
 
 2.  **Navega a la carpeta**
+```bash
 cd N_Finanzas
 
 3. **Abre el archivo principal**
+```bash
 # Opción 1: Navegador por defecto
 open index.html
 
