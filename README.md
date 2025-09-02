@@ -50,13 +50,13 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 git clone https://github.com/fvilpaz/N_Finances
 ```
 
-1. Navega a la carpeta
+2. Navega a la carpeta
 
 ```bash
 cd N_Finances
 ```
 
-1. Abre el archivo principal
+3. Abre el archivo principal
 
 ```
 # Opción 1: Navegador por defecto
