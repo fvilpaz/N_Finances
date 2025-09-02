@@ -43,10 +43,6 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 - ✅ **Diseño responsive** para móvil y desktop
 - ✅ **Resultados con división equitativa** automática
 
-## 📸 Preview
-
-![N_Finanzas Preview](https://via.placeholder.com/800x400?text=N_Finanzas+Screenshot)
-
 ## 🚀 Cómo usar
 
 1. **Clona el repositorio**
