@@ -49,10 +49,10 @@ El desarrollo contó con la **asistencia de IA colaborativa** para:
 ```bash
 git clone https://github.com/fvilpaz/N_Finances
 
-2.  **Navega a la carpeta
+2.  **Navega a la carpeta**
 cd N_Finanzas
 
-3. **Abre el archivo principal
+3. **Abre el archivo principal**
 # Opción 1: Navegador por defecto
 open index.html
 
